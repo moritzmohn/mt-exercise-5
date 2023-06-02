@@ -54,3 +54,4 @@ Evaluate a trained model with
 - I added for all beam sizes from 1 to 10 a configuration file in the config directory.
 - I added a folder called beam_size_experiment with a python script to create the graphs. The numbers (time, bleu score) I entered manually in the script.
 - The resulting graphs are saved in the same folder. There is one graph for the BLEU scores and another one for the time.
+- The experiments are made with the best model from part 1 which is the one using bpe and vocab size of 2000.
