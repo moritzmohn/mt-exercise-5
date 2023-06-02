@@ -3,7 +3,7 @@
 scripts=$(dirname "$0")
 base=$scripts/..
 
-data=$base/sampled_data
+data=$base/data_nl_de
 configs=$base/configs
 
 translations=$base/translations
@@ -34,7 +34,7 @@ CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt tran
 
 # compute case-sensitive BLEU 
 
-cat $translations_sub/test.$model_name.$trg | sacrebleu $data/test.$trg
+tail -n 1779 $translations_sub/test.$model_name.$trg | sacrebleu $data/test.$trg
 
 
 echo "time taken:"
